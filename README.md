@@ -15,7 +15,7 @@ alpha
 
 # How to use
 
-1. Set configuration in your `config.cson`
+#### 1. Set configuration in your `config.cson`
 
 - Unlike normal atom packages, you must **directly edit** `config.cson` to add configuration.
 - define each submode spec under `submode.submode` object.
@@ -44,7 +44,7 @@ alpha
         ]
 ```
 
-2. Define keymap to use defined submode in your `keymap.cson`
+#### 2. Define keymap to use defined submode in your `keymap.cson`
 
 ```coffeescript
 # after you invoke `core:save`, you can invoke `some:command` by keystroke `a`
