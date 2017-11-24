@@ -1,7 +1,7 @@
 {
   "name": "submode",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "activate granular scope for keymap by trigger command",
   "license": "MIT",
   "private": true,
