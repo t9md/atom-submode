@@ -1,6 +1,6 @@
 # atom-submode
 
-activate granular keymap by trigger command
+activate granular CSS scope for keymap by trigger command
 
 # Development status
 
@@ -19,9 +19,6 @@ alpha
 
 - Unlike normal atom packages, you must **directly edit** `config.cson` to add configuration.
 - define each submode spec under `submode.submode` object.
-  - key is submode name, `after-save`, `after.move`, value must have `target`(String) and `commands`(Array).
-  - `target` must be one of `atom-wokspace`, `atom-text-editor` or `atom-pane`.
-  - set trigger commands to activate submode.
 - when submode is split by `.` and each segment classname is added to target element.
   - E.g. For `after-save` submode, `atom.workspace.getElement().classList.add("after-save")`
   - E.g. For `after.move` submode, `atom.workspace.getActiveTextEditor().element.classList("after", "move")`
@@ -29,10 +26,10 @@ alpha
 ```coffeescript
   submode:
     submode:
-      "after-save":
-        target: "atom-workspace",
+      "after-save": # submode name
+        target: "atom-workspace", # Must be one of ["atom-workspace", "atom-text-editor", "atom-pane"]
         commands: [
-          "core:save"
+          "core:save" # List of commands which trigger this submode
         ],
       "after.move":
         target: "atom-text-editor",
@@ -83,7 +80,7 @@ alpha
   't': 'vim-mode-plus:next-tab'
   'T': 'vim-mode-plus:previous-tab'
 
-# To win over default `t` in text-editor scope.
+# To win over default `t`(vim-mode-plus:till) in text-editor scope.
 'atom-pane.gt-mode atom-text-editor.vim-mode-plus':
   't': 'vim-mode-plus:next-tab'
   'T': 'vim-mode-plus:previous-tab'

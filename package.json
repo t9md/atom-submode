@@ -2,7 +2,7 @@
   "name": "submode",
   "main": "./lib/main",
   "version": "0.1.0",
-  "description": "activate granular keymap by trigger command",
+  "description": "activate granular scope for keymap by trigger command",
   "license": "MIT",
   "private": true,
   "repository": "https://github.com/t9md/atom-submode",
